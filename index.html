@@ -7,20 +7,15 @@
   </head>
   <script type="application/javascript">
     window.addEventListener('beforeinstallprompt', (e) => {
-      e.prompt();
-
-      // Wait for the user to respond to the prompt
-      deferredPrompt.userChoice
-        .then((choiceResult) => {
-          if (choiceResult.outcome === 'accepted') {
-            console.log('User accepted the A2HS prompt');
-          } else {
-            console.log('User dismissed the A2HS prompt');
-          }
-        });
+      // don't show the native prompt, show a custom button instead
+      e.preventDefault();
+      document.getElementById("android-install-button").style.display = "block";
     }); 
   </script>
   <body>
-    <p>This is an example paragraph. Anything in the <strong>body</strong> tag will appear on the page, just like this <strong>p</strong> tag and its contents.</p>
+    <div id="android-install-button" style="display: none;">
+      <a href='https://play.google.com/store/apps/details?id=uk.co.evezy.driver&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png' width="170"/></a>
+    </div>
+    <p>No more 3 year contracts! Decide monthly whether you want to continue, swap or stop.</p>
   </body>
 </html>
