@@ -1,0 +1,25 @@
+{
+    "short_name": "Onto",
+    "name": "Onto: The all-inclusive electric car subscription",
+    "icons":
+    [
+        {
+            "src": "/images/icons-192.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        },
+        {
+            "src": "/images/icons-512.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        }
+    ],
+    "prefer_related_applications": true,
+    "related_applications":
+    [
+        {
+            "platform": "play",
+            "id": "uk.co.evezy.driver"
+        }
+    ]
+}
